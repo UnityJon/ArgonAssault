@@ -18,6 +18,13 @@ public class Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        ProcessTranslation();
+        ProcessRotation();
+
+    }
+
+    private void ProcessTranslation()
+    {
         //Calculate new X Position
         float xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
         float xOffset = xThrow * xSpeed * Time.deltaTime;
@@ -32,5 +39,10 @@ public class Player : MonoBehaviour {
 
         //Update Ship Position
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    private void ProcessRotation()
+    {
+        transform.localRotation = Quaternion.Euler(-30f,30f,0f);
     }
 }
