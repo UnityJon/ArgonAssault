@@ -357,6 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9058c12d45c2cf5469fe6782853a80a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  xSpeed: 4
 --- !u!1 &909035663
 GameObject:
   m_ObjectHideFlags: 0
@@ -551,7 +552,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1608761262}
-  - component: {fileID: 1608761261}
   - component: {fileID: 1608761260}
   m_Layer: 0
   m_Name: Circuit
@@ -584,17 +584,6 @@ MonoBehaviour:
     - {fileID: 409999042}
   smoothRoute: 1
   editorVisualisationSubsteps: 100
---- !u!114 &1608761261
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1608761259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7eca5f7d8f58af4585ece1cd13a39de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1608761262
 Transform:
   m_ObjectHideFlags: 0
