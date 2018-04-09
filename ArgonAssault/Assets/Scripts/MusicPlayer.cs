@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MusicPlayer : MonoBehaviour {
 
@@ -13,7 +12,7 @@ public class MusicPlayer : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-        Invoke("LoadFirstScene", 10f);
+ 
 	}
 	
 	// Update is called once per frame
@@ -21,8 +20,4 @@ public class MusicPlayer : MonoBehaviour {
 		
 	}
 
-    void LoadFirstScene()
-    {
-        SceneManager.LoadScene(1);
-    }
 }
