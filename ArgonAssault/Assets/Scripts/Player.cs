@@ -9,8 +9,10 @@ public class Player : MonoBehaviour {
     [Tooltip("In m")] [SerializeField] float clampXMovement = 5f;
     [Tooltip("In m^s-1")] [SerializeField] float ySpeed = 4f;
     [Tooltip("In m")] [SerializeField] float clampYMovement = 5f;
+
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float controlPitchFactor = -30f;
+
     [SerializeField] float positionYawFactor = 10f;
     [SerializeField] float controlRollFactor = -30f;
 
@@ -20,9 +22,19 @@ public class Player : MonoBehaviour {
     void Start () {
 		
 	}
-	
-	// Update is called once per frame
-	void Update ()
+
+    void OnCollisionEnter(Collision collision)
+    {
+        print("Collided");
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        print("Triggered");
+    }
+
+    // Update is called once per frame
+    void Update ()
     {
         ProcessTranslation();
         ProcessRotation();
