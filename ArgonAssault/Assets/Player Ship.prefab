@@ -40,7 +40,8 @@ GameObject:
   - component: {fileID: 23258712498943636}
   - component: {fileID: 65393683318422730}
   - component: {fileID: 54012970447016312}
-  - component: {fileID: 114013690754649116}
+  - component: {fileID: 114059008102626536}
+  - component: {fileID: 114364656011190262}
   m_Layer: 0
   m_Name: Player Ship
   m_TagString: Untagged
@@ -174,7 +175,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.96973, y: 1.28585, z: 3.424901}
   m_Center: {x: -0.00000029802322, y: 0.000000059604645, z: -0.000000059604645}
---- !u!114 &114013690754649116
+--- !u!114 &114059008102626536
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -193,6 +194,17 @@ MonoBehaviour:
   controlPitchFactor: -30
   positionYawFactor: 10
   controlRollFactor: -30
+--- !u!114 &114364656011190262
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1346159394663776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00dabd61d9987994d99c88e311624b4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &198253888382935204
 ParticleSystem:
   m_ObjectHideFlags: 1

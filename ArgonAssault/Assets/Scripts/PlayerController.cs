@@ -3,42 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour {
-
+public class PlayerController : MonoBehaviour {
+    [Header("General")]
     [Tooltip("In m^s-1")] [SerializeField] float xSpeed = 4f;
     [Tooltip("In m")] [SerializeField] float clampXMovement = 5f;
     [Tooltip("In m^s-1")] [SerializeField] float ySpeed = 4f;
     [Tooltip("In m")] [SerializeField] float clampYMovement = 5f;
 
+    [Header("Screen Position Parameters")]
     [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float controlPitchFactor = -30f;
-
     [SerializeField] float positionYawFactor = 10f;
+
+
+    [Header("Control Throw Parameters")]
+    [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
 
     float xThrow, yThrow;
-
-    // Use this for initialization
-    void Start () {
-		
-	}
-
-    void OnCollisionEnter(Collision collision)
-    {
-        print("Collided");
-    }
-
-    void OnTriggerEnter(Collider other)
-    {
-        print("Triggered");
-    }
+    bool controlIsEnabled = true;
 
     // Update is called once per frame
     void Update ()
     {
-        ProcessTranslation();
-        ProcessRotation();
-
+        if (controlIsEnabled)
+        {
+            ProcessTranslation();
+            ProcessRotation();
+        }
     }
 
     private void ProcessTranslation()
@@ -65,5 +56,11 @@ public class Player : MonoBehaviour {
         float yaw= (transform.localPosition.x * positionYawFactor);
         float roll= (xThrow * controlRollFactor);
         transform.localRotation = Quaternion.Euler(pitch,yaw,roll);
+    }
+ 
+    private void OnPlayerDeath() // Called by string reference
+    {
+        print("DisableControls");
+        controlIsEnabled = false;
     }
 }
