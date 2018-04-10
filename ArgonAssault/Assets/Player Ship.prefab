@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00dabd61d9987994d99c88e311624b4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathExplosion: {fileID: 1436318070599924}
+  deathFX: {fileID: 1436318070599924}
   levelLoadDelay: 1
 --- !u!198 &198194291807652280
 ParticleSystem:
