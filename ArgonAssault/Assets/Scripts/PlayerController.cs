@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour {
     [SerializeField] float positionPitchFactor = -5f;
     [SerializeField] float positionYawFactor = 10f;
 
-
     [Header("Control Throw Parameters")]
     [SerializeField] float controlPitchFactor = -30f;
     [SerializeField] float controlRollFactor = -30f;
@@ -60,7 +59,6 @@ public class PlayerController : MonoBehaviour {
  
     private void OnPlayerDeath() // Called by string reference
     {
-        print("DisableControls");
         controlIsEnabled = false;
     }
 }
