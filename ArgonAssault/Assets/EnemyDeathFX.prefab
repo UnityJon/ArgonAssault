@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 199750896051279776}
   - component: {fileID: 82350535055295956}
   m_Layer: 0
-  m_Name: Explosion
+  m_Name: EnemyDeathFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52,7 +52,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8fa9071ed9ffba240971ebf99ee8f44c, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
 
+    [SerializeField] GameObject deathFX;
+    [SerializeField] Transform parent;
+
 	// Use this for initialization
 	void Start () {
         AddNonTriggerBoxCollider();
@@ -11,7 +14,11 @@ public class Enemy : MonoBehaviour {
 
    void OnParticleCollision(GameObject other)
     {
-        print("Enemy "+gameObject.name + "has been shot!");
+        //Instantiate an explosion FX at the enemy's current position.  Assign FX to runtime parent object
+        GameObject fx =Instantiate(deathFX, transform.position,Quaternion.identity);
+        fx.transform.parent = parent;
+
+        //destroy the enemy itself
         Destroy(gameObject);
     }
 
