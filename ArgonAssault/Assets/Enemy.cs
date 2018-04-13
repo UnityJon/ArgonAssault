@@ -6,17 +6,18 @@ public class Enemy : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+        AddNonTriggerBoxCollider();
 	}
 
    void OnParticleCollision(GameObject other)
     {
         print("Enemy "+gameObject.name + "has been shot!");
         Destroy(gameObject);
+    }
+
+    void AddNonTriggerBoxCollider()
+    {
+        Collider myCollider = gameObject.AddComponent<BoxCollider>();
+        myCollider.isTrigger = false;
     }
 }

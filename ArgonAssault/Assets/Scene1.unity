@@ -959,6 +959,46 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 198253888382935204, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1756123904
+      objectReference: {fileID: 0}
+    - target: {fileID: 198253888382935204, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198267983227547036, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1678775540
+      objectReference: {fileID: 0}
+    - target: {fileID: 198267983227547036, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198253888382935204, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198267983227547036, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198253888382935204, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 198267983227547036, guid: aaca100269fe1ae40a0944ed98a28c99,
+        type: 2}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aaca100269fe1ae40a0944ed98a28c99, type: 2}
   m_IsPrefabParent: 0
