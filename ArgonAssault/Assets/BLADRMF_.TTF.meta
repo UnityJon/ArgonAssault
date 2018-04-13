@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 8669a03f8c1bb0041a50aee828b95065
+timeCreated: 1523611858
+licenseType: Free
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Blade Runner Movie Font
+  fontNames:
+  - Blade Runner Movie Font
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
