@@ -7,7 +7,6 @@ public class ScoreBoard : MonoBehaviour {
 
     int score=0;
     Text scoreText;
-    int scorePerHit = 12;
 
 	// Use this for initialization
 	void Start () {
@@ -15,9 +14,9 @@ public class ScoreBoard : MonoBehaviour {
         scoreText.text = score.ToString();
 	}
 	
-	public void ScoreHit()
+	public void ScoreHit(int scoreToAdd)
     {
-        score = score + scorePerHit;
+        score = score + scoreToAdd;
         scoreText.text = score.ToString();
     }
 }
