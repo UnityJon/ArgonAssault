@@ -6,7 +6,9 @@ public class Enemy : MonoBehaviour {
 
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
-    [SerializeField] int scorePerHit = 12;
+    [SerializeField] int scorePerKill = 12;
+    [SerializeField] int health=2;
+
     ScoreBoard scoreBoard;
 
 	// Use this for initialization
@@ -17,12 +19,22 @@ public class Enemy : MonoBehaviour {
 
    void OnParticleCollision(GameObject other)
     {
+        health--;
+        scoreBoard.ScoreHit(1);
+        if (health < 1)
+        {
+            KillEnemy();
+        }
+    }
+
+    private void KillEnemy()
+    {
         //Instantiate an explosion FX at the enemy's current position.  Assign FX to runtime parent object
-        GameObject fx =Instantiate(deathFX, transform.position,Quaternion.identity);
+        GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
 
         //Increase Score
-        scoreBoard.ScoreHit(scorePerHit);
+        scoreBoard.ScoreHit(scorePerKill);
 
         //destroy the enemy itself
         Destroy(gameObject);
