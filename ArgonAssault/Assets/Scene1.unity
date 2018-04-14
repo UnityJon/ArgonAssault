@@ -356,15 +356,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114456448724271044, guid: 19990804766799c4f99330a76fe8d85d,
         type: 2}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 1039959395759534, guid: e7a6137758f8e7a4e84d7210f4f7be05,
-        type: 2}
-    - target: {fileID: 114456448724271044, guid: 19990804766799c4f99330a76fe8d85d,
-        type: 2}
       propertyPath: parent
       value: 
       objectReference: {fileID: 418867027}
+    - target: {fileID: 1503262145077816, guid: 19990804766799c4f99330a76fe8d85d, type: 2}
+      propertyPath: m_Name
+      value: Falcon(0)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19990804766799c4f99330a76fe8d85d, type: 2}
   m_IsPrefabParent: 0
@@ -414,7 +412,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 1580944368671352, guid: 9f18fe3ecfedeb043a93fb087b732712, type: 2}
       propertyPath: m_Name
-      value: Enemy Type2 (1)
+      value: Hawk(1)
       objectReference: {fileID: 0}
     - target: {fileID: 114899363779562084, guid: 9f18fe3ecfedeb043a93fb087b732712,
         type: 2}
@@ -427,6 +425,11 @@ Prefab:
       propertyPath: parent
       value: 
       objectReference: {fileID: 418867027}
+    - target: {fileID: 114899363779562084, guid: 9f18fe3ecfedeb043a93fb087b732712,
+        type: 2}
+      propertyPath: health
+      value: 50
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f18fe3ecfedeb043a93fb087b732712, type: 2}
   m_IsPrefabParent: 0
@@ -469,6 +472,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 23544877482471512, guid: 87b477779e2493342b1ef415b4eb3ada,
+        type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 588f03c6deb596c418450699e805e964, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 87b477779e2493342b1ef415b4eb3ada, type: 2}
   m_IsPrefabParent: 0
@@ -793,15 +801,13 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 114899363779562084, guid: 9f18fe3ecfedeb043a93fb087b732712,
         type: 2}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 1039959395759534, guid: e7a6137758f8e7a4e84d7210f4f7be05,
-        type: 2}
-    - target: {fileID: 114899363779562084, guid: 9f18fe3ecfedeb043a93fb087b732712,
-        type: 2}
       propertyPath: parent
       value: 
       objectReference: {fileID: 418867027}
+    - target: {fileID: 1580944368671352, guid: 9f18fe3ecfedeb043a93fb087b732712, type: 2}
+      propertyPath: m_Name
+      value: Hawk(0)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f18fe3ecfedeb043a93fb087b732712, type: 2}
   m_IsPrefabParent: 0
@@ -866,6 +872,46 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1632687757 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1503262145077816, guid: 19990804766799c4f99330a76fe8d85d,
+    type: 2}
+  m_PrefabInternal: {fileID: 457488806}
+--- !u!95 &1632687762
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632687757}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!320 &1632687763
+PlayableDirector:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1632687757}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_PlayableAsset: {fileID: 11400000, guid: e9a87fc9d0eac954ba899407ec188fcd, type: 2}
+  m_InitialState: 1
+  m_WrapMode: 2
+  m_DirectorUpdateMode: 1
+  m_InitialTime: 0
+  m_SceneBindings:
+  - key: {fileID: 114502010397326450, guid: e9a87fc9d0eac954ba899407ec188fcd, type: 2}
+    value: {fileID: 1632687757}
+  m_ExposedReferences:
+    m_References: []
 --- !u!1001 &1663118182
 Prefab:
   m_ObjectHideFlags: 0
@@ -947,21 +993,15 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1503262145077816, guid: 19990804766799c4f99330a76fe8d85d, type: 2}
-      propertyPath: m_Name
-      value: EnemyType1 (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 114456448724271044, guid: 19990804766799c4f99330a76fe8d85d,
-        type: 2}
-      propertyPath: deathFX
-      value: 
-      objectReference: {fileID: 1039959395759534, guid: e7a6137758f8e7a4e84d7210f4f7be05,
-        type: 2}
     - target: {fileID: 114456448724271044, guid: 19990804766799c4f99330a76fe8d85d,
         type: 2}
       propertyPath: parent
       value: 
       objectReference: {fileID: 418867027}
+    - target: {fileID: 1503262145077816, guid: 19990804766799c4f99330a76fe8d85d, type: 2}
+      propertyPath: m_Name
+      value: Falcon(1)
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19990804766799c4f99330a76fe8d85d, type: 2}
   m_IsPrefabParent: 0

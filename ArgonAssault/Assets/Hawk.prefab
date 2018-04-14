@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23386047159709274}
   - component: {fileID: 114899363779562084}
   m_Layer: 0
-  m_Name: Enemy Type2
+  m_Name: Hawk
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -96,5 +96,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 1039959395759534, guid: e7a6137758f8e7a4e84d7210f4f7be05, type: 2}
   parent: {fileID: 0}
-  scorePerHit: 12
+  scorePerKill: 12
   health: 50
